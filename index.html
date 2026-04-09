@@ -7,46 +7,22 @@
 </head>
 <body>
 
-<div class="header">
-    <img src="https://i.pravatar.cc/150" class="foto">
-    <h1>HAFIDZ DANESWARA</h1>
-</div>
-
 <div class="container">
+    <h1>Portfolio Saya 🚀</h1>
 
-    <div class="left">
-        <h2>PROFIL</h2>
-        <p>Saya adalah pelajar yang memiliki minat di bidang teknologi dan pengembangan web.</p>
+    <form id="form">
+        <input type="hidden" id="editIndex">
 
-        <h2>KONTAK</h2>
-        <p>📞 08123456789</p>
-        <p>📧 hafidz@email.com</p>
-        <p>📍 Indonesia</p>
+        <input type="text" id="nama" placeholder="Nama Project" required>
+        <input type="text" id="kategori" placeholder="Kategori" required>
+        <input type="file" id="gambar" accept="image/*">
+        <input type="text" id="link" placeholder="Link Project">
+        <textarea id="deskripsi" placeholder="Deskripsi"></textarea>
 
-        <h2>KEAHLIAN</h2>
-        <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-        </ul>
-    </div>
+        <button type="submit">Simpan</button>
+    </form>
 
-    <div class="right">
-        <h2>PENDIDIKAN</h2>
-        <p>SMK - RPL (2024)</p>
-
-        <h2>PENGALAMAN (CRUD)</h2>
-
-        <form id="form">
-            <input type="hidden" id="editIndex">
-            <input type="text" id="judul" placeholder="Judul Pengalaman" required>
-            <input type="text" id="deskripsi" placeholder="Deskripsi" required>
-            <button type="submit">Simpan</button>
-        </form>
-
-        <div id="list"></div>
-    </div>
-
+    <div id="list" class="grid"></div>
 </div>
 
 <script src="script.js"></script>
