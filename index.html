@@ -1,23 +1,52 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <title>Portfolio CRUD</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>Portfolio Hafidz</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<div class="header">
+    <img src="https://i.pravatar.cc/150" class="foto">
+    <h1>HAFIDZ DANESWARA</h1>
+</div>
+
 <div class="container">
-    <h1>Portfolio CRUD</h1>
 
-    <form id="form">
-        <input type="hidden" id="editIndex">
-        <input type="text" id="nama" placeholder="Nama" required>
-        <input type="text" id="deskripsi" placeholder="Deskripsi" required>
-        <button type="submit">Simpan</button>
-    </form>
+    <div class="left">
+        <h2>PROFIL</h2>
+        <p>Saya adalah pelajar yang memiliki minat di bidang teknologi dan pengembangan web.</p>
 
-    <div id="list"></div>
+        <h2>KONTAK</h2>
+        <p>📞 08123456789</p>
+        <p>📧 hafidz@email.com</p>
+        <p>📍 Indonesia</p>
+
+        <h2>KEAHLIAN</h2>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+        </ul>
+    </div>
+
+    <div class="right">
+        <h2>PENDIDIKAN</h2>
+        <p>SMK - RPL (2024)</p>
+
+        <h2>PENGALAMAN (CRUD)</h2>
+
+        <form id="form">
+            <input type="hidden" id="editIndex">
+            <input type="text" id="judul" placeholder="Judul Pengalaman" required>
+            <input type="text" id="deskripsi" placeholder="Deskripsi" required>
+            <button type="submit">Simpan</button>
+        </form>
+
+        <div id="list"></div>
+    </div>
+
 </div>
 
 <script src="script.js"></script>
