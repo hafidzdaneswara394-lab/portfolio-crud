@@ -2,30 +2,57 @@
 <html lang="id">
 <head>
 <meta charset="UTF-8">
-<title>Portfolio Hafidz</title>
+<title>Portfolio</title>
+
 <link rel="stylesheet" href="style.css">
+
+<!-- AOS Animation -->
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
 <body>
 
-<div class="container">
-
-    <h1 class="title">🚀 Portfolio</h1>
-
-    <form id="form" class="glass">
-        <input type="hidden" id="editIndex">
-
-        <input type="text" id="nama" placeholder="Nama Project" required>
-        <input type="text" id="kategori" placeholder="Kategori" required>
-        <input type="file" id="gambar" accept="image/*">
-        <input type="text" id="link" placeholder="Link Project">
-        <textarea id="deskripsi" placeholder="Deskripsi"></textarea>
-
-        <button type="submit">Simpan</button>
-    </form>
-
-    <div id="list" class="grid"></div>
-
+<!-- NAVBAR -->
+<div class="navbar">
+    <h2>Hafidz</h2>
+    <button onclick="toggleMode()">🌙</button>
 </div>
+
+<!-- PROFILE -->
+<section class="profile" data-aos="fade-up">
+    <img src="https://i.pravatar.cc/150">
+    <h1>Hafidz Daneswara</h1>
+    <p>Web Developer | Student</p>
+</section>
+
+<!-- FILTER + SEARCH -->
+<div class="tools">
+    <input type="text" id="search" placeholder="🔍 Cari project...">
+    <select id="filter">
+        <option value="">Semua</option>
+        <option value="Web">Web</option>
+        <option value="Design">Design</option>
+    </select>
+</div>
+
+<!-- FORM -->
+<form id="form" class="glass">
+    <input type="hidden" id="editIndex">
+
+    <input type="text" id="nama" placeholder="Nama Project" required>
+    <input type="text" id="kategori" placeholder="Kategori" required>
+    <input type="file" id="gambar">
+    <input type="text" id="link" placeholder="Link">
+    <textarea id="deskripsi" placeholder="Deskripsi"></textarea>
+
+    <button>Simpan</button>
+</form>
+
+<!-- LIST -->
+<div id="list" class="grid"></div>
+
+<!-- AOS -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>AOS.init();</script>
 
 <script src="script.js"></script>
 </body>
