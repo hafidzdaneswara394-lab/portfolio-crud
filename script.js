@@ -13,7 +13,7 @@ function tampilData() {
             <h3>${item.nama}</h3>
             <p><b>${item.kategori}</b></p>
             <p>${item.deskripsi}</p>
-            ${item.link ? `<a href="${item.link}" target="_blank">Lihat Project</a>` : ""}
+            ${item.link ? `<a href="${item.link}" target="_blank">🔗 Lihat Project</a>` : ""}
 
             <div class="actions">
                 <button class="edit" onclick="editData(${index})">Edit</button>
