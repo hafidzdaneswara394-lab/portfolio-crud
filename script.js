@@ -9,7 +9,7 @@ function tampilData() {
     data.forEach((item, index) => {
         list.innerHTML += `
         <div class="card">
-            <h3>${item.nama}</h3>
+            <h3>${item.judul}</h3>
             <p>${item.deskripsi}</p>
             <button class="edit" onclick="editData(${index})">Edit</button>
             <button onclick="hapusData(${index})">Hapus</button>
@@ -23,14 +23,14 @@ function tampilData() {
 form.addEventListener("submit", function(e) {
     e.preventDefault();
 
-    const nama = document.getElementById("nama").value;
+    const judul = document.getElementById("judul").value;
     const deskripsi = document.getElementById("deskripsi").value;
     const editIndex = document.getElementById("editIndex").value;
 
     if (editIndex === "") {
-        data.push({ nama, deskripsi });
+        data.push({ judul, deskripsi });
     } else {
-        data[editIndex] = { nama, deskripsi };
+        data[editIndex] = { judul, deskripsi };
         document.getElementById("editIndex").value = "";
     }
 
@@ -44,7 +44,7 @@ function hapusData(index) {
 }
 
 function editData(index) {
-    document.getElementById("nama").value = data[index].nama;
+    document.getElementById("judul").value = data[index].judul;
     document.getElementById("deskripsi").value = data[index].deskripsi;
     document.getElementById("editIndex").value = index;
 }
