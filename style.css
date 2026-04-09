@@ -1,117 +1,97 @@
 body {
     margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background: linear-gradient(135deg, #0f172a, #1e3a8a);
+    font-family: 'Segoe UI';
+    background: linear-gradient(135deg, #0f172a, #1e293b);
     color: white;
+    transition: 0.3s;
 }
 
-/* TITLE */
-.title {
-    text-align: center;
-    margin: 30px 0;
-    font-size: 2.5em;
-    animation: fadeDown 1s ease;
+/* LIGHT MODE */
+.light {
+    background: #f1f5f9;
+    color: black;
 }
 
-/* GLASS FORM */
-.glass {
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 30px;
     background: rgba(255,255,255,0.1);
     backdrop-filter: blur(10px);
+}
+
+/* PROFILE */
+.profile {
+    text-align: center;
+    padding: 40px;
+}
+
+.profile img {
+    width: 120px;
+    border-radius: 50%;
+}
+
+/* TOOLS */
+.tools {
+    display: flex;
+    gap: 10px;
     padding: 20px;
+    justify-content: center;
+}
+
+.tools input, .tools select {
+    padding: 10px;
+    border-radius: 8px;
+}
+
+/* FORM */
+.glass {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
     border-radius: 15px;
     display: flex;
     flex-direction: column;
     gap: 10px;
-    margin-bottom: 20px;
-    animation: fadeUp 1s ease;
-}
-
-input, textarea, button {
-    padding: 10px;
-    border-radius: 8px;
-    border: none;
-}
-
-textarea {
-    resize: none;
-}
-
-/* BUTTON */
-button {
-    background: #38bdf8;
-    color: black;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-button:hover {
-    transform: scale(1.05);
-    background: #0ea5e9;
 }
 
 /* GRID */
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    padding: 20px;
     gap: 15px;
 }
 
 /* CARD */
 .card {
     background: rgba(255,255,255,0.1);
-    backdrop-filter: blur(10px);
-    border-radius: 15px;
     padding: 10px;
-    animation: fadeUp 0.6s ease;
+    border-radius: 15px;
     transition: 0.3s;
 }
 
 .card:hover {
-    transform: translateY(-5px) scale(1.02);
+    transform: scale(1.05);
 }
 
-/* IMAGE */
 .card img {
     width: 100%;
     height: 150px;
     object-fit: cover;
-    border-radius: 10px;
 }
 
-/* ACTION BUTTON */
-.actions button {
-    margin-right: 5px;
-    margin-top: 5px;
+/* BUTTON */
+button {
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
 }
 
-.edit {
-    background: #22c55e;
-}
-
-.delete {
-    background: #ef4444;
-}
-
-/* ANIMATION */
-@keyframes fadeUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes fadeDown {
-    from {
-        opacity: 0;
-        transform: translateY(-30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
+/* ACTION */
+.edit { background: green; }
+.delete { background: red; }
